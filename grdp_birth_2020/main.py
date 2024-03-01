@@ -2,14 +2,13 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-def readData(file):
-    tmp = pd.read_csv(file)
-    return tmp
-
 def main():
-    data = readData("./grdp_birth_2020.csv")
+    data = pd.read_csv("grdp_birth_2020.csv")
     # print( data.info() )
     # print( data )
+    st.title("GRDP와 신생아 출산(2020)")
+    st.write("x축은 로그로 축 변환했습니다.")
+
     fig = px.scatter( data_frame = data,
                       x = "price_2020", y = "birth",
                       log_x=True,
