@@ -1,0 +1,11 @@
+# json 파일 읽기 : with open(): json.load()
+# https://jsikim1.tistory.com/221
+with open("./data/grdp_birth_2020.json") as file:
+    data = json.load(file)
+
+print( type( data ) )
+
+# json to dataframe : pansdas normalizing
+data = pd.read_json("./data/grdp_birth_2020.json")
+print( type( data ) )
+print( data.info() )
