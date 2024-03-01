@@ -7,7 +7,7 @@ def readData(file):
     return tmp
 
 def main():
-    data = readData("./data/grdp_birth_2020.csv")
+    data = readData("./grdp_birth_2020.csv")
     # print( data.info() )
     # print( data )
     fig = px.scatter( data_frame = data,
