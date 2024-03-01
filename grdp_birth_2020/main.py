@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 def main():
-    data = pd.read_csv("grdp_birth_2020.csv")
+    data = pd.read_csv("https://raw.githubusercontent.com/yoonani/Qdata/master/social/balanced/grdp_birth_2020.csv")
     # print( data.info() )
     # print( data )
     st.title("GRDP와 신생아 출산(2020)")
